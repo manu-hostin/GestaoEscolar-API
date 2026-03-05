@@ -1,4 +1,8 @@
 package com.weg.gestaoEscolar.DTO.professor;
 
-public class ProfessorRequisicao {
+public record ProfessorRequisicao (
+        String nome,
+        String email,
+        String disciplina
+){
 }

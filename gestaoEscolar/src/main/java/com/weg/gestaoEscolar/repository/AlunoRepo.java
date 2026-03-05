@@ -110,4 +110,23 @@ public class AlunoRepo {
 
         }
     }
+
+    public String deletarAluno(int id) throws SQLException {
+        String query = """
+            DELETE FROM aluno
+            WHERE id = ?
+            """;
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, id);
+            int linhasAfetadas = stmt.executeUpdate();
+
+            if (linhasAfetadas > 0){
+                return "Aluno deletado do BD com sucesso!";
+            }
+        }
+        return "Aluno não encontrado";
+    }
 }

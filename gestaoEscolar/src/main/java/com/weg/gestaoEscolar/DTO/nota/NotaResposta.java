@@ -1,4 +1,9 @@
 package com.weg.gestaoEscolar.DTO.nota;
 
-public class NotaResposta {
-}
+public record NotaResposta (
+        Long id,
+        String alunoNome,
+        String aulaAssunto,
+        Double valor
+)
+{}

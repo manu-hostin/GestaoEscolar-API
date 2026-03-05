@@ -1,22 +1,25 @@
 package com.weg.gestaoEscolar.model;
 
-import java.util.List;
-
 public class Turma {
 
     private int id;
     private String nome;
-    private String nomeCurso;
-    private String nomeProf;
-    private List<Aluno> nomeAlunos;
+    private int cursoId;
+    private int professorId;
 
     public Turma(){}
-    public Turma(int id, String nome, String nomeCurso, String nomeProf, List<Aluno> nomeAlunos) {
+
+    public Turma(int id, String nome, int cursoId, int professorId) {
         this.id = id;
         this.nome = nome;
-        this.nomeCurso = nomeCurso;
-        this.nomeProf = nomeProf;
-        this.nomeAlunos = nomeAlunos;
+        this.cursoId = cursoId;
+        this.professorId = professorId;
+    }
+
+    public Turma(String nome, int cursoId, int professorId) {
+        this.nome = nome;
+        this.cursoId = cursoId;
+        this.professorId = professorId;
     }
 
     public int getId() {
@@ -31,31 +34,11 @@ public class Turma {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public int getCursoId() {
+        return cursoId;
     }
 
-    public String getNomeCurso() {
-        return nomeCurso;
-    }
-
-    public void setNomeCurso(String nomeCurso) {
-        this.nomeCurso = nomeCurso;
-    }
-
-    public String getNomeProf() {
-        return nomeProf;
-    }
-
-    public void setNomeProf(String nomeProf) {
-        this.nomeProf = nomeProf;
-    }
-
-    public List<Aluno> getNomeAlunos() {
-        return nomeAlunos;
-    }
-
-    public void setNomeAlunos(List<Aluno> nomeAlunos) {
-        this.nomeAlunos = nomeAlunos;
+    public int getProfessorId() {
+        return professorId;
     }
 }

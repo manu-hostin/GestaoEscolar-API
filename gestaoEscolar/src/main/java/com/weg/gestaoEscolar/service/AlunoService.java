@@ -43,4 +43,8 @@ public class AlunoService {
         repo.atualizarAluno(aluno);
         return mapper.paraResposta(aluno);
     }
+
+    public String deletarAluno(int id) throws SQLException {
+        return repo.deletarAluno(id);
+    }
 }

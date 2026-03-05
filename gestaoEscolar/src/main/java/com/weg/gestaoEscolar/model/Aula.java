@@ -1,20 +1,25 @@
 package com.weg.gestaoEscolar.model;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 public class Aula {
 
+
     private int id;
-    private String nomeTurma;
-    private LocalDateTime dataHota;
+    private int idTurma;
+    private LocalDateTime dataHora;
     private String assunto;
 
     public Aula(){}
-    public Aula(int id, String nomeTurma, LocalDateTime dataHota, String assunto) {
+    public Aula(int id, int idTurma, LocalDateTime dataHora, String assunto) {
         this.id = id;
-        this.nomeTurma = nomeTurma;
-        this.dataHota = dataHota;
+        this.idTurma = idTurma;
+        this.dataHora = dataHora;
+        this.assunto = assunto;
+    }
+    public Aula(int idTurma, LocalDateTime dataHora, String assunto) {
+        this.idTurma = idTurma;
+        this.dataHora = dataHora;
         this.assunto = assunto;
     }
 
@@ -26,20 +31,20 @@ public class Aula {
         this.id = id;
     }
 
-    public String getNomeTurma() {
-        return nomeTurma;
+    public int getidTurma() {
+        return idTurma;
     }
 
-    public void setNomeTurma(String nomeTurma) {
-        this.nomeTurma = nomeTurma;
+    public void setIdTurma(int idTurma) {
+        this.idTurma = idTurma;
     }
 
-    public LocalDateTime getDataHota() {
-        return dataHota;
+    public LocalDateTime getDataHora() {
+        return dataHora;
     }
 
-    public void setDataHota(LocalDateTime dataHota) {
-        this.dataHota = dataHota;
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
     }
 
     public String getAssunto() {

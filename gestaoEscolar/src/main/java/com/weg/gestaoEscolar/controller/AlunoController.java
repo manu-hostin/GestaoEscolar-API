@@ -55,5 +55,13 @@ public class AlunoController {
         }
     }
 
+    @DeleteMapping("/deletar/{id}")
+    public String deletarAluno (@PathVariable int id){
+        try {
+            return service.deletarAluno(id);
+        } catch (SQLException e){
+            throw new RuntimeException(e.getMessage());
+        }
+    }
 
 }

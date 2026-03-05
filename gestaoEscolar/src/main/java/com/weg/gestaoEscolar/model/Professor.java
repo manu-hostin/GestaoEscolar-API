@@ -17,6 +17,12 @@ public class Professor {
         this.disciplina = disciplina;
     }
 
+    public Professor(String nome, String disciplina, String email) {
+        this.nome = nome;
+        this.email = email;
+        this.disciplina = disciplina;
+    }
+
     public int getId() {
         return id;
     }
